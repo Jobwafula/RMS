@@ -1,20 +1,73 @@
-import React from 'react'
-import { Dashboard } from './dashboard/pages/Dashboard'
-import { MainLayout } from './dashboard/components/layout/MainLayout'
-import { BrowserRouter as Router } from 'react-router-dom';
+// src/App.tsx
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
-  
 
+
+import { MainLayout } from "./dashboard/components/layout/MainLayout";
+import { Dashboard } from "./dashboard/pages/Dashboard";
+import Properties from "./dashboard/pages/Properties";
+
+export default function App() {
   return (
-    <>
-    <Router >
-      <MainLayout>
-      <Dashboard />
-      </MainLayout>
-      </Router>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <Dashboard />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/dashboard"
+          element={
+            <MainLayout>
+              <Dashboard />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/properties"
+          element={
+            <MainLayout>
+              <Properties />
+            </MainLayout>
+          }
+        />
+        {/* <Route
+          path="/tenants"
+          element={
+            <MainLayout>
+              <Tenants />
+            </MainLayout>
+          }
+        /> */}
+        {/* <Route
+          path="/leases"
+          element={
+            <MainLayout>
+              <Leases />
+            </MainLayout>
+          }
+        /> */}
+        {/* <Route
+          path="/payments"
+          element={
+            <MainLayout>
+              <Payments />
+            </MainLayout>
+          }
+        /> */}
+        {/* <Route
+          path="/communications"
+          element={
+            <MainLayout>
+              <Communications />
+            </MainLayout>
+          }
+        /> */}
+      </Routes>
+    </Router>
+  );
 }
-
-export default App
