@@ -43,7 +43,7 @@ export  default function Properties() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-800">Properties</h1>
-        <button className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+        <button className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
           <Plus className="w-5 h-5" />
           Add Property
         </button>

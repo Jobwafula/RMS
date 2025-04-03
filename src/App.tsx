@@ -6,6 +6,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MainLayout } from "./dashboard/components/layout/MainLayout";
 import { Dashboard } from "./dashboard/pages/Dashboard";
 import Properties from "./dashboard/pages/Properties";
+import Tenants from "./dashboard/pages/Tenants";
+import Leases from "./dashboard/pages/Leases";
+import Payments from "./dashboard/pages/Payments";
+import Communications from "./dashboard/pages/Communications";
 
 export default function App() {
   return (
@@ -35,38 +39,38 @@ export default function App() {
             </MainLayout>
           }
         />
-        {/* <Route
+         <Route
           path="/tenants"
           element={
             <MainLayout>
               <Tenants />
             </MainLayout>
           }
-        /> */}
-        {/* <Route
+        /> 
+         <Route
           path="/leases"
           element={
             <MainLayout>
               <Leases />
             </MainLayout>
           }
-        /> */}
-        {/* <Route
+        /> 
+        <Route
           path="/payments"
           element={
             <MainLayout>
               <Payments />
             </MainLayout>
           }
-        /> */}
-        {/* <Route
+        /> 
+         <Route
           path="/communications"
           element={
             <MainLayout>
               <Communications />
             </MainLayout>
           }
-        /> */}
+        /> 
       </Routes>
     </Router>
   );
